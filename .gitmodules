@@ -1,0 +1,6 @@
+[submodule "external/glfwpp"]
+	path = external/glfwpp
+	url = https://github.com/janekb04/glfwpp.git
+[submodule "external/Win32-Acrylic-Effect"]
+	path = external/Win32-Acrylic-Effect
+	url = https://github.com/Extrimis/Win32-Acrylic-Effect.git
