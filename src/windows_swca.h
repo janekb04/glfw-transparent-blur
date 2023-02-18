@@ -1,4 +1,6 @@
 #pragma once
+#ifndef JBIELAK_GLFW_TRANSPARENT_BLUR_WINDOW_SWCA_H
+#define JBIELAK_GLFW_TRANSPARENT_BLUR_WINDOW_SWCA_H
 
 #include <windows.h>
 
@@ -92,7 +94,7 @@ struct WINDOWCOMPOSITIONATTRIBDATA { // Options for
 typedef BOOL(WINAPI *PFN_SET_WINDOW_COMPOSITION_ATTRIBUTE)(
     HWND, const WINDOWCOMPOSITIONATTRIBDATA *);
 
-void acrylic_swca(HWND hwnd) {
+inline void acrylic_swca(HWND hwnd) {
   const HINSTANCE hm = LoadLibrary("user32.dll");
   if (hm) {
     typedef BOOL(WINAPI * pSetWindowCompositionAttribute)(
@@ -113,7 +115,7 @@ void acrylic_swca(HWND hwnd) {
     FreeLibrary(hm);
   }
 }
-void acrylic_swca_disable(HWND hwnd) {
+inline void acrylic_swca_disable(HWND hwnd) {
   const HINSTANCE hm = LoadLibrary("user32.dll");
   if (hm) {
     typedef BOOL(WINAPI * pSetWindowCompositionAttribute)(
@@ -134,3 +136,5 @@ void acrylic_swca_disable(HWND hwnd) {
     FreeLibrary(hm);
   }
 }
+
+#endif // JBIELAK_GLFW_TRANSPARENT_BLUR_WINDOW_SWCA_H
