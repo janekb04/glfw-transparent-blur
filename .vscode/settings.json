@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "cstdlib": "cpp",
-        "xiosbase": "cpp",
-        "stdexcept": "cpp"
-    }
-}
